@@ -111,19 +111,42 @@ def cariData():
     if not ditemukan:
         print("Data tidak ditemukan.")
 
+#Sorting secara Bubble Sort
+# def urutkanDataAscending():
+#     for i in range(jumlah - 1):
+#         for j in range(jumlah - i - 1):
+#             if data[j][0] > data[j+1][0]:
+#                 data[j], data[j+1] = data[j+1], data[j]
+#     print("Data berhasil diurutkan secara ascending berdasarkan NIM.")
+
+# def urutkanDataDescending():
+#     for i in range(jumlah - 1):
+#         for j in range(jumlah - i - 1):
+#             if data[j][0] < data[j+1][0]:
+#                 data[j], data[j+1] = data[j+1], data[j]
+#     print("Data berhasil diurutkan secara descending berdasarkan NIM.")
+
+#Sorting secara selection sort dari AI
 def urutkanDataAscending():
-    for i in range(jumlah - 1):
-        for j in range(jumlah - i - 1):
-            if data[j][0] > data[j+1][0]:
-                data[j], data[j+1] = data[j+1], data[j]
+    for i in range(jumlah):
+        min_index = i
+        for j in range(i + 1, jumlah):
+            if data[j][0] < data[min_index][0]:  # Bandingkan NIM
+                min_index = j
+        if min_index != i:
+            data[i], data[min_index] = data[min_index], data[i]
     print("Data berhasil diurutkan secara ascending berdasarkan NIM.")
 
 def urutkanDataDescending():
-    for i in range(jumlah - 1):
-        for j in range(jumlah - i - 1):
-            if data[j][0] < data[j+1][0]:
-                data[j], data[j+1] = data[j+1], data[j]
+    for i in range(jumlah):
+        max_index = i
+        for j in range(i + 1, jumlah):
+            if data[j][0] > data[max_index][0]:  # Bandingkan NIM
+                max_index = j
+        if max_index != i:
+            data[i], data[max_index] = data[max_index], data[i]
     print("Data berhasil diurutkan secara descending berdasarkan NIM.")
+
 
 def adminMenu():
     while True:
