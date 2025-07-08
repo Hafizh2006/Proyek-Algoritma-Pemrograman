@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background-color: #f0f2f5; /* Light gray background */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- Navbar Styling (reused from previous design) --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    color: #333;
+    font-size: 15px;
+}
+
+.navbar-left span {
+    font-weight: 500;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar-right a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+}
+
+.navbar-right a:hover {
+    color: #007aff; /* Apple-like blue for hover */
+}
+
+.user-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: #555;
+}
+
+/* --- Main Content Styling --- */
+.main-content {
+    flex-grow: 1; /* Allows it to take available space */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    padding: 20px; /* Add some padding around the container */
+}
+
+.cards-container {
+    display: flex;
+    gap: 40px; /* Space between cards */
+    flex-wrap: wrap; /* Allow cards to wrap to the next line on smaller screens */
+    justify-content: center; /* Center cards if they wrap */
+    padding: 20px; /* Padding for the container itself */
+}
+
+.card {
+    background-color: #ffffff;
+    border: 1px solid #c9c9c9;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    width: 250px; /* Fixed width for each card */
+    max-width: 100%; /* Ensure it doesn't overflow on small screens */
+    text-align: center;
+}
+
+.card-image-placeholder {
+    width: 180px; /* Adjust as needed */
+    height: 180px; /* Adjust as needed */
+    background-color: #333; /* Black color for the placeholder */
+    border-radius: 8px; /* Slightly rounded corners for the placeholder */
+    margin-bottom: 30px;
+}
+
+.card-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #9b59b6; /* Purple color from the image */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(155, 89, 182, 0.4);
+    text-transform: uppercase; /* Ensure button text is uppercase */
+}
+
+.card-button:hover {
+    background-color: #8e44ad; /* Slightly darker purple on hover */
+}
+
+/* --- Responsive adjustments --- */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column; /* Stack cards vertically on smaller screens */
+        align-items: center; /* Center stacked cards */
+        gap: 30px; /* Adjust gap for vertical stacking */
+    }
+    .card {
+        width: 80%; /* Make cards take more width on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: 10px;
+    }
+    .navbar-right {
+        width: 100%;
+        justify-content: space-around;
+        margin-top: 10px;
+    }
+}

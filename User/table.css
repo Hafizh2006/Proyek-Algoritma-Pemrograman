@@ -1,0 +1,236 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5; /* Warna latar belakang umum */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Mengatur item ke atas */
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #ffffff; /* Latar belakang utama konten */
+    width: 90%; /* Lebar konten utama */
+    max-width: 1200px; /* Batas lebar maksimum */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 20px; /* Margin atas untuk memisahkan dari tepi layar */
+    margin-bottom: 20px;
+    overflow: hidden; /* Penting untuk header yang sticky atau border-radius */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #e0f2f7; /* Warna biru muda untuk header */
+    color: #333;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-left span {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    margin-left: 20px;
+    font-size: 0.95em;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #007bff; /* Warna biru saat hover */
+}
+
+.user-icon {
+    width: 30px;
+    height: 30px;
+    background-color: #aaa; /* Warna placeholder untuk ikon user */
+    border-radius: 50%;
+    margin-left: 20px;
+    /* Anda bisa mengganti ini dengan gambar ikon atau ikon font */
+}
+
+main {
+    padding: 20px 30px;
+}
+
+.tahun-ajaran {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #f0f8ff; /* Warna biru sangat muda */
+    color: #333;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #b0e0e6; /* Border sedikit biru */
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.dropbtn:hover {
+    background-color: #e6f7ff;
+}
+
+.arrow-down {
+    margin-left: 8px;
+    border: solid #333;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.table-container {
+    overflow-x: auto; /* Agar tabel bisa discroll jika terlalu lebar */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Menghilangkan spasi antar sel */
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 8px; /* Border radius untuk keseluruhan tabel */
+    overflow: hidden; /* Penting untuk border-radius pada tabel */
+}
+
+table thead {
+    background-color: #e0f7fa; /* Warna biru muda untuk header tabel */
+    color: #333;
+    text-align: left;
+}
+
+table th {
+    padding: 12px 15px;
+    font-weight: 600;
+    border-bottom: 1px solid #ddd;
+}
+
+table tbody tr {
+    border-bottom: 1px solid #eee; /* Garis pemisah antar baris */
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Warna latar belakang selang-seling */
+}
+
+table tbody tr:hover {
+    background-color: #f5f5f5; /* Warna saat baris di-hover */
+}
+
+table td {
+    padding: 10px 15px;
+    color: #555;
+}
+
+/* Responsiveness dasar */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header-right {
+        margin-top: 10px;
+    }
+
+    .nav-link {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+
+    .user-icon {
+        margin-left: 0;
+    }
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px; 
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    padding: 10px 0; /* Tambah padding vertikal */
+}
+
+.dropdown-content h4 {
+    margin: 0 15px 10px; 
+    color: #666;
+    font-size: 0.9em;
+    font-weight: normal;
+}
+
+.dropdown-content hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 5px 0;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 8px 15px; 
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}

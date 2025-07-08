@@ -1,3 +1,5 @@
+import tkinter as tk
+
 maksData = 5
 kolom = 8
 data = [[None for _ in range(kolom)] for _ in range(maksData)]

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Informasi Mahasiswa</title>
+    <link rel="stylesheet" href="table.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-left">
+            </div>
+            <div class="header-right">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Log out</a>
+                <div class="user-icon"></div>
+            </div>
+        </header>
+
+        <main>
+            <div class="tahun-ajaran">
+                Tahun ajaran 2024/2025
+            </div>
+
+            <div class="controls">
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <?php
+                            $currentSort = "Ascending"; // Default text
+                            if (isset($_GET['sort_column']) && isset($_GET['sort_order'])) {
+                                $columnName = '';
+                                switch ($_GET['sort_column']) {
+                                    case 'nim': $columnName = 'NIM'; break;
+                                    case 'nama': $columnName = 'Nama'; break;
+                                    case 'tanggal_lahir': $columnName = 'Tanggal Lahir'; break;
+                                    case 'fakultas': $columnName = 'Fakultas'; break;
+                                    case 'program_studi': $columnName = 'Program Studi'; break;
+                                    // Tambahkan kasus lain jika ada kolom lain yang bisa diurutkan
+                                }
+                                $orderText = ($_GET['sort_order'] == 'ASC') ? 'Ascending' : 'Descending';
+                                if ($columnName) {
+                                    $currentSort = "$columnName ($orderText)";
+                                } else {
+                                    $currentSort = $orderText; // Default jika kolom tidak dikenal
+                                }
+                            }
+                            echo htmlspecialchars($currentSort);
+                        ?>
+                        <span class="arrow-down"></span>
+                    </button>
+                    <div class="dropdown-content">
+                        <h4>Urutkan berdasarkan:</h4>
+                        <a href="?sort_column=nim&sort_order=ASC">NIM (Ascending)</a>
+                        <a href="?sort_column=nim&sort_order=DESC">NIM (Descending)</a>
+                        <hr> <a href="?sort_column=nama&sort_order=ASC">Nama (Ascending)</a>
+                        <a href="?sort_column=nama&sort_order=DESC">Nama (Descending)</a>
+                        <hr>
+                        <a href="?sort_column=jenis_kelamin&sort_order=ASC">Jenis Kelamin (Ascending)</a>
+                        <a href="?sort_column=jenis_kelamin&sort_order=DESC">Jenis Kelamin (Descending)</a>
+                        <hr>
+                        <a href="?sort_column=tanggal_lahir&sort_order=ASC">Tanggal Lahir (Ascending)</a>
+                        <a href="?sort_column=tanggal_lahir&sort_order=DESC">Tanggal Lahir (Descending)</a>
+                        <hr>
+                        <a href="?sort_column=fakultas&sort_order=ASC">Fakultas (Ascending)</a>
+                        <a href="?sort_column=fakultas&sort_order=DESC">Fakultas (Descending)</a>
+                        <hr>
+                        <a href="?sort_column=program_studi&sort_order=ASC">Program Studi (Ascending)</a>
+                        <a href="?sort_column=program_studi&sort_order=DESC">Program Studi (Descending)</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>NIM</th>
+                            <th>Nama</th>
+                            <th>Jenis Kelamin</th>
+                            <th>Tanggal Lahir</th>
+                            <th>Fakultas</th>
+                            <th>Program studi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        // Ini adalah placeholder PHP. Dalam aplikasi nyata, ini akan berinteraksi dengan database.
+
+                        // --- PHP Logic for Sorting (Start) ---
+                        // Default sorting
+                        $sortColumn = 'nim';
+                        $sortOrder = 'ASC';
+
+                        // Check if sorting parameters are provided in the URL
+                        if (isset($_GET['sort_column']) && isset($_GET['sort_order'])) {
+                            $allowedColumns = ['nim', 'nama', 'jenis_kelamin', 'tanggal_lahir', 'fakultas', 'program_studi'];
+                            $allowedOrders = ['ASC', 'DESC'];
+
+                            $requestedColumn = strtolower($_GET['sort_column']);
+                            $requestedOrder = strtoupper($_GET['sort_order']);
+
+                            if (in_array($requestedColumn, $allowedColumns)) {
+                                $sortColumn = $requestedColumn;
+                            }
+                            if (in_array($requestedOrder, $allowedOrders)) {
+                                $sortOrder = $requestedOrder;
+                            }
+                        }
+
+                        // Dummy data (replace with actual database fetch)
+                        $mahasiswa = [
+                            [
+                                'nim' => '2400018003',
+                                'nama' => 'Hafizh Ashshiddiqie',
+                                'jenis_kelamin' => 'Laki-laki',
+                                'tanggal_lahir' => '01/02/2006',
+                                'fakultas' => 'Kedokteran',
+                                'program_studi' => 'Kedokteran'
+                            ],
+                            [
+                                'nim' => '2400018099',
+                                'nama' => 'Budi 01 Gaming',
+                                'jenis_kelamin' => 'Laki-laki',
+                                'tanggal_lahir' => '15/03/2005',
+                                'fakultas' => 'Hukum',
+                                'program_studi' => 'Hukum'
+                            ],
+                            [
+                                'nim' => '2400018038',
+                                'nama' => 'Muhamad Ardyan Yulianto',
+                                'jenis_kelamin' => 'Laki-laki',
+                                'tanggal_lahir' => '15/03/2005',
+                                'fakultas' => 'Teknik',
+                                'program_studi' => 'Informatika'
+                            ],
+                            [
+                                'nim' => '2400018001',
+                                'nama' => 'Citra Dewi',
+                                'jenis_kelamin' => 'Perempuan',
+                                'tanggal_lahir' => '10/01/2006',
+                                'fakultas' => 'Ekonomi',
+                                'program_studi' => 'Manajemen'
+                            ],
+                            [
+                                'nim' => '2400018002',
+                                'nama' => 'Dwi Lestari',
+                                'jenis_kelamin' => 'Perempuan',
+                                'tanggal_lahir' => '20/04/2005',
+                                'fakultas' => 'Ilmu Sosial',
+                                'program_studi' => 'Sosiologi'
+                            ],
+                        ];
+
+                        // Perform sorting on the dummy data (in a real app, this would be done in the SQL query)
+                        usort($mahasiswa, function($a, $b) use ($sortColumn, $sortOrder) {
+                            $valueA = $a[$sortColumn];
+                            $valueB = $b[$sortColumn];
+
+                            // Handle specific date format if needed for accurate date sorting
+                            if ($sortColumn == 'tanggal_lahir') {
+                                $valueA = DateTime::createFromFormat('d/m/Y', $valueA)->getTimestamp();
+                                $valueB = DateTime::createFromFormat('d/m/Y', $valueB)->getTimestamp();
+                            }
+
+                            if ($valueA == $valueB) {
+                                return 0;
+                            }
+                            if ($sortOrder == 'ASC') {
+                                return ($valueA < $valueB) ? -1 : 1;
+                            } else {
+                                return ($valueA > $valueB) ? -1 : 1;
+                            }
+                        });
+                        // --- PHP Logic for Sorting (End) ---
+
+                        foreach ($mahasiswa as $data) {
+                            echo "<tr>";
+                            echo "<td>" . htmlspecialchars($data['nim']) . "</td>";
+                            echo "<td>" . htmlspecialchars($data['nama']) . "</td>";
+                            echo "<td>" . htmlspecialchars($data['jenis_kelamin']) . "</td>";
+                            echo "<td>" . htmlspecialchars($data['tanggal_lahir']) . "</td>";
+                            echo "<td>" . htmlspecialchars($data['fakultas']) . "</td>";
+                            echo "<td>" . htmlspecialchars($data['program_studi']) . "</td>";
+                            echo "</tr>";
+                        }
+                        ?>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
