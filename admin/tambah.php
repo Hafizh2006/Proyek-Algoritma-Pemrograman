@@ -23,7 +23,7 @@ if (isset($_POST['submit'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tambah Data Mahasiswa</title>
-    <link rel="stylesheet" href="tambah.css">
+    <link rel="stylesheet" href="../asset/admin/tambah.css">
 </head>
 <body>
     <header class="navbar">
@@ -31,38 +31,40 @@ if (isset($_POST['submit'])) {
             <span>Tahun ajaran 2024/2025</span>
         </div>
         <div class="navbar-right">
-            <a href="#">Home</a>
-            <a href="#">Log out</a>
-            <span class="user-icon">&#128100;</span>
+            <a href="index.php">Home</a>
+            <a href="logout.php">Log out</a>
+            <a href="profile.php"><span class="user-icon">&#128100;</span></a>
         </div>
     </header>
 
     <main class="container">
         <div class="form-card">
             <h2>TAMBAHKAN DATA MAHASISWA</h2>
-            <form>
+            <form action="" method="POST">
                 <div class="input-group">
-                    <input type="text" placeholder="Masukkan NIM">
+                    <input type="text" placeholder="Masukkan NIM" name="nim" id="nim">
+                </div>
+
+                <div class="input-group">
+                    <input type="text" placeholder="Masukkan Nama" name="nama" id="nama">
+                </div class="input-group">
+                <div>
+                    <label for="tanggalLahir">Tanggal Lahir:</label>
+                    <input type="date" id="tanggalLahir" name="tanggalLahir">
                 </div>
                 <div class="input-group">
-                    <input type="text" placeholder="Masukkan Nama">
+                    <input type="text" placeholder="Jenis Kelamin" name="jenis" id="jenis">
                 </div>
+
                 <div class="input-group">
-                    <input type="text" placeholder="Jenis Kelamin">
+                    <input type="text" placeholder="Fakultas" name="fakultas" id="fakultas">
                 </div>
+
                 <div class="input-group">
-                    <input type="text" placeholder="Tanggal Lahir">
+                    <input type="text" placeholder="Program Studi" name="jurusan" id="jurusan">
                 </div>
-                <div class="input-group">
-                    <input type="text" placeholder="Fakultas">
-                </div>
-                <div class="input-group">
-                    <input type="text" placeholder="Program Studi">
-                </div>
-                <div class="input-group">
-                    <input type="text" placeholder="Tahun Ajaran">
-                </div>
-                <button type="submit" class="submit-button">Tambahkan</button>
+
+                <button type="submit" name="submit" class="submit-button">Tambahkan</button>
             </form>
         </div>
     </main>

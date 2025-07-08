@@ -73,10 +73,11 @@ function selectionsort_descending($dataMahasiswa = []){
 }
 
 function cari($dataMahasiswa, $nimCari){
+    //var_dump($dataMahasiswa); die;
     $nimCari = (string)$nimCari; 
     
     foreach ($dataMahasiswa as $data) {
-        if (isset($data['nim']) && trim($data['nim']) === $nimCari) {
+        if (isset($data['nim']) && intval($data['nim']) === intval($nimCari)) {
             return $data;
         }
     }

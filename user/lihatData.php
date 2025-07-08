@@ -1,7 +1,7 @@
 <?php 
 session_start();
 
-if (!isset($_SESSION['loginAdmin'])){
+if (!isset($_SESSION['loginUser'])){
     header("Location:login.php");
     exit();
 }
@@ -36,20 +36,20 @@ if (isset($_GET['submit'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistem Informasi Mahasiswa</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../asset/user/dashboard.css"> </head>
 </head>
 <body>
+    <header class="navbar">
+        <div class="navbar-left">
+            <span>Tahun ajaran 2024/2025</span>
+        </div>
+        <div class="navbar-right">
+            <a href="index.php">Home</a>
+            <a href="logout.php">Log out</a>
+            <span class="user-icon">&#128100;</span>
+        </div>
+    </header>
     <div class="container">
-        <header>
-            <div class="header-left">
-                <span>MacBook Pro 14" - 4</span>
-            </div>
-            <div class="header-right">
-                <a href="#" class="nav-link">Home</a>
-                <a href="#" class="nav-link">Log out</a>
-                <div class="user-icon"></div>
-            </div>
-        </header>
-
         <main>
             <div class="tahun-ajaran">
                 Tahun ajaran 2024/2025
@@ -64,20 +64,6 @@ if (isset($_GET['submit'])){
                         <h4>Urutkan berdasarkan:</h4>
                         <a href="?sort_column=nim&sort_order=ASC">NIM (Ascending)</a>
                         <a href="?sort_column=nim&sort_order=DESC">NIM (Descending)</a>
-                        <hr> <a href="?sort_column=nama&sort_order=ASC">Nama (Ascending)</a>
-                        <a href="?sort_column=nama&sort_order=DESC">Nama (Descending)</a>
-                        <hr>
-                        <a href="?sort_column=jenis_kelamin&sort_order=ASC">Jenis Kelamin (Ascending)</a>
-                        <a href="?sort_column=jenis_kelamin&sort_order=DESC">Jenis Kelamin (Descending)</a>
-                        <hr>
-                        <a href="?sort_column=tanggal_lahir&sort_order=ASC">Tanggal Lahir (Ascending)</a>
-                        <a href="?sort_column=tanggal_lahir&sort_order=DESC">Tanggal Lahir (Descending)</a>
-                        <hr>
-                        <a href="?sort_column=fakultas&sort_order=ASC">Fakultas (Ascending)</a>
-                        <a href="?sort_column=fakultas&sort_order=DESC">Fakultas (Descending)</a>
-                        <hr>
-                        <a href="?sort_column=program_studi&sort_order=ASC">Program Studi (Ascending)</a>
-                        <a href="?sort_column=program_studi&sort_order=DESC">Program Studi (Descending)</a>
                     </div>
                 </div>
             </div>

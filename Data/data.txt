@@ -1,4 +1,3 @@
-2400018038,Muhamad Ardyan Yulianto,Laki-Laki,Teknologi Industri,Informatika,2024
-2400018003,Hafizh Ashssiddiqie,Laki-Laki,Teknologi Industri,Informatika,2024
-2400018078,Maharaja Singa,Laki-Laki,Teknologi Industri,Informatika,2024
-2400018099,Angelina,Perempuan,Teknologi Industri,Informatika,2024
+2400018020,Maharaja Singa,Laki-Laki,1976-07-06,Teknologi Industri,Informatika
+2400018003,Hafizh Ashssiddiqie,Laki-Laki,2025-07-02,Teknologi Industri,Informatika
+2400018038,Muhamad Ardyan Yulianto,Laki-Laki,2025-07-05,Teknologi Industri,Informatika

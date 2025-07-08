@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Pendaftaran</title>
-    <link rel="stylesheet" href="hapus.css">
+    <link rel="stylesheet" href="../asset/admin/hapus.css">
 </head>
 <body>
    <div class="container">
@@ -19,6 +19,6 @@
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="../asset/admin/script.js"></script>
 </body>
 </html>

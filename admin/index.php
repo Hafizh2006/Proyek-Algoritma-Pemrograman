@@ -14,7 +14,8 @@ if (!isset($_SESSION['loginAdmin'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Management</title>
-    <link rel="stylesheet" href="dashboard.css"> </head>
+    <link rel="stylesheet" href="../asset/admin/dashboard.css"> 
+</head>
 <body>
     <header class="navbar">
         <div class="navbar-left">
@@ -24,7 +25,7 @@ if (!isset($_SESSION['loginAdmin'])){
         <div class="navbar-right">
             <a href="index.php">Home</a>
             <a href="logout.php">Log out</a>
-            <span class="user-icon">&#128100;</span>
+            <a href="profile.php"><span class="user-icon">&#128100;</span></a>
         </div>
     </header>
 
@@ -37,7 +38,12 @@ if (!isset($_SESSION['loginAdmin'])){
 
             <div class="card">
                 <div class="card-image-placeholder"></div>
-                <a href="lihat.php"></a><button class="card-button">LIHAT DATA</button>
+                <a href="lihat.php"><button class="card-button">LIHAT DATA</button></a>
+            </div>
+
+            <div class="card">
+                <div class="card-image-placeholder"></div>
+                <a href="ubah.php"><button class="card-button">UBAH DATA</button></a>
             </div>
         </div>
     </main>

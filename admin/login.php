@@ -16,14 +16,14 @@ if (isset($_SESSION['loginAdmin'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Pendaftaran</title>
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="../asset/admin/login.css">
 </head>
 <body>
    <div class="container">
         <div class="login-box">
             <div class="form">
                 <h1>LOGIN</h1>
-                <form method="POST" id = "formdaftar" action="proses.php">
+                <form method="POST" id = "formdaftar" action="../Algoritma/algoritmaLogin.php">
                     <input type="text" placeholder="Username" name="username" id = "username"><br>
                     <span class="error" id="errorNama"></span><br>
 
