@@ -34,40 +34,78 @@ if (isset($_GET['submit'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Sistem Informasi Mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Dashboard</h1>
-    <form action="" method="GET">
-        <select name="sort" id="sort">
-            <option value="1">Ascending</option>
-            <option value="2">Descending</option>
-        </select>
-        <button type="submit" name="submit">Terapkan</button>
-    </form>    
-        <table>
-            <thead>
-                <th> Nim </th>
-                <th> Nama </th>
-                <th> Jenis Kelamin </th>
-                <th> Fakultas </th>
-                <th> Program Studi </th>
-                <th> Tahun Ajaran </th>
-            </thead>
-            <tbody>
-                <?php foreach ($dataMahasiswa as $mhs): ?>
-                <tr>
-                    <th><?php echo $mhs['nim'] ?></th>
-                    <th><?php echo $mhs['nama'] ?></th>
-                    <th><?php echo $mhs['jenis'] ?></th>
-                    <th><?php echo $mhs['fakultas'] ?></th>
-                    <th><?php echo $mhs['jurusan'] ?></th>
-                    <th><?php echo $mhs['tahunAjaran'] ?></th>
-                </tr>
-                <?php endforeach;?>
-            </tbody>
-        </table>
-        
-    <a href="index.php"><button>Kembali</button></a>    
+    <div class="container">
+        <header>
+            <div class="header-right">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Log out</a>
+                <div class="user-icon"></div>
+            </div>
+        </header>
+
+        <main>
+            <div class="tahun-ajaran">
+                Tahun ajaran 2024/2025
+            </div>
+
+            <div class="controls">
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <span class="arrow-down"></span>
+                    </button>
+                    <div class="dropdown-content">
+                        <h4>Urutkan berdasarkan:</h4>
+                        <a href="?sort_column=nim&sort_order=ASC">NIM (Ascending)</a>
+                        <a href="?sort_column=nim&sort_order=DESC">NIM (Descending)</a>
+                        <hr> <a href="?sort_column=nama&sort_order=ASC">Nama (Ascending)</a>
+                        <a href="?sort_column=nama&sort_order=DESC">Nama (Descending)</a>
+                        <hr>
+                        <a href="?sort_column=jenis_kelamin&sort_order=ASC">Jenis Kelamin (Ascending)</a>
+                        <a href="?sort_column=jenis_kelamin&sort_order=DESC">Jenis Kelamin (Descending)</a>
+                        <hr>
+                        <a href="?sort_column=tanggal_lahir&sort_order=ASC">Tanggal Lahir (Ascending)</a>
+                        <a href="?sort_column=tanggal_lahir&sort_order=DESC">Tanggal Lahir (Descending)</a>
+                        <hr>
+                        <a href="?sort_column=fakultas&sort_order=ASC">Fakultas (Ascending)</a>
+                        <a href="?sort_column=fakultas&sort_order=DESC">Fakultas (Descending)</a>
+                        <hr>
+                        <a href="?sort_column=program_studi&sort_order=ASC">Program Studi (Ascending)</a>
+                        <a href="?sort_column=program_studi&sort_order=DESC">Program Studi (Descending)</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>NIM</th>
+                            <th>Nama</th>
+                            <th>Jenis Kelamin</th>
+                            <th>Tanggal Lahir</th>
+                            <th>Fakultas</th>
+                            <th>Program studi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($dataMahasiswa as $mhs): ?>
+                        <tr>
+                            <th><?php echo $mhs['nim'] ?></th>
+                            <th><?php echo $mhs['nama'] ?></th>
+                            <th><?php echo $mhs['jenis'] ?></th>
+                            <th><?php echo $mhs['tanggalLahir'] ?></th>
+                            <th><?php echo $mhs['fakultas'] ?></th>
+                            <th><?php echo $mhs['jurusan'] ?></th>
+                        </tr>
+                        <?php endforeach;?>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
 </body>
 </html>

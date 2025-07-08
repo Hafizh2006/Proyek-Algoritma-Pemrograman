@@ -3,18 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Form Pendaftaran</title>
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <h1>Login User</h1>
-    <form action="" method="POST">
-        <label for="username">Username</label>
-        <input type="text" name="username" id="username">
+   <div class="container">
+        <div class="login-box">
+            <div class="form">
+                <h1>LOGIN</h1>
+                <form method="POST" id = "formdaftar" action="proses.php">
+                    <input type="text" placeholder="Username" name="username" id = "username"><br>
+                    <span class="error" id="errorNama"></span><br>
 
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password">
-        
-        <button type="submit">Login</button>
-    </form>
+                    <input type="password" placeholder="Password" name="password" id = "password"><br>
+                    <span class="error" id="errorPassword"></span><br>
+
+                    <button type = "submit" name = "daftar" class = "tombol">LOGIN</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

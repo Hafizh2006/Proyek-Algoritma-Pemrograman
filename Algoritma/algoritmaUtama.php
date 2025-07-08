@@ -5,11 +5,11 @@ function tambahData($data){
     $file = "../Data/data.txt";
     if (!file_exists($file)){
         $myFile = fopen($file, 'a');
-        fwrite($myFile, $data['nim'] . "," . $data['nama'] . "," . $data['jenis'] . "," . $data['fakultas']  . "," .  $data['jurusan'] . "," .  $data['tahunAjaran'] . "\n");        
+        fwrite($myFile, $data['nim'] . "," . $data['nama'] . "," . $data['jenis'] . "," . $data['tanggalLahir']  . "," .  $data['fakultas'] . "," .  $data['jurusan'] . "\n");        
         fclose($myFile); 
     } else {
         $myFile = fopen($file, 'a');
-        fwrite($myFile, $data['nim'] . "," . $data['nama'] . "," . $data['jenis']  . "," . $data['fakultas'] . ",".  $data['jurusan']. "," .  $data['tahunAjaran'].  "\n");
+        fwrite($myFile, $data['nim'] . "," . $data['nama'] . "," . $data['jenis']  . "," . $data['tanggalLahir'] . ",".  $data['fakultas']. "," .  $data['jurusan'].  "\n");
         fclose($myFile);
     }
 }
@@ -27,9 +27,9 @@ function ambilData(){
             'nim' => $data[0],
             'nama' => $data[1],
             'jenis' => $data[2],
-            'fakultas' => $data[3],
-            'jurusan' => $data[4],
-            'tahunAjaran' => $data[5]
+            'tanggalLahir' => $data[3],
+            'fakultas' => $data[4],
+            'jurusan' => $data[5]
         );
         $i++;
     }
@@ -72,6 +72,15 @@ function selectionsort_descending($dataMahasiswa = []){
 
 }
 
-
+function cari($dataMahasiswa, $nimCari){
+    $nimCari = (string)$nimCari; 
+    
+    foreach ($dataMahasiswa as $data) {
+        if (isset($data['nim']) && trim($data['nim']) === $nimCari) {
+            return $data;
+        }
+    }
+    return null;
+}
 
 ?>
