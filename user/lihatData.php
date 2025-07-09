@@ -35,35 +35,25 @@ if (isset($_GET['submit'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistem Informasi Mahasiswa</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="../asset/user/dashboard.css"> </head>
+    <link rel="stylesheet" href="../asset/user/lihat.css">
 </head>
 <body>
     <header class="navbar">
         <div class="navbar-left">
             <span>Tahun ajaran 2024/2025</span>
         </div>
+        
         <div class="navbar-right">
             <a href="index.php">Home</a>
             <a href="logout.php">Log out</a>
-            <span class="user-icon">&#128100;</span>
+            <a href="profile.php"><span class="user-icon">&#128100;</span></a>
         </div>
     </header>
-    <div class="container">
-        <main>
-            <div class="tahun-ajaran">
-                Tahun ajaran 2024/2025
-            </div>
 
-            <div class="controls">
-                <div class="dropdown">
-                    <button class="dropbtn">
-                        <span class="arrow-down"></span>
-                    </button>
                     <div class="dropdown-content">
                         <h4>Urutkan berdasarkan:</h4>
-                        <a href="?sort_column=nim&sort_order=ASC">NIM (Ascending)</a>
-                        <a href="?sort_column=nim&sort_order=DESC">NIM (Descending)</a>
+                        <a href="?sort_column=nim&sort_order=ASC"><button class= "ascending">Ascending</button></a>
+                        <a href="?sort_column=nim&sort_order=DESC"><button class="descending">Descending</button></a>
                     </div>
                 </div>
             </div>

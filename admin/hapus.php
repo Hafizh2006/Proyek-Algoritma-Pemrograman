@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Pendaftaran</title>
+    <title>Hapus Data</title>
     <link rel="stylesheet" href="../asset/admin/hapus.css">
 </head>
 <body>
@@ -19,6 +19,5 @@
             </div>
         </div>
     </div>
-    <script src="../asset/admin/script.js"></script>
 </body>
 </html>

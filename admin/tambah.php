@@ -48,8 +48,7 @@ if (isset($_POST['submit'])) {
                 <div class="input-group">
                     <input type="text" placeholder="Masukkan Nama" name="nama" id="nama">
                 </div class="input-group">
-                <div>
-                    <label for="tanggalLahir">Tanggal Lahir:</label>
+                <div class="input-group">
                     <input type="date" id="tanggalLahir" name="tanggalLahir">
                 </div>
                 <div class="input-group">

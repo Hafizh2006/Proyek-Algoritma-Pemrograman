@@ -34,7 +34,7 @@ if (isset($_GET['submit'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sistem Informasi Mahasiswa</title>
-    <link rel="stylesheet" href="../asset/admin/dashboard.css">
+    <link rel="stylesheet" href="../asset/admin/lihat.css">
 </head>
 <body>
     <header class="navbar">
@@ -48,22 +48,11 @@ if (isset($_GET['submit'])){
             <a href="profile.php"><span class="user-icon">&#128100;</span></a>
         </div>
     </header>
-    <?php if (isset($_GET['submit'])): ?>
-        <div class="container">
-            <main>
-                <div class="tahun-ajaran">
-                    Tahun ajaran 2024/2025
-                </div>
 
-                <div class="controls">
-                    <div class="dropdown">
-                        <button class="dropbtn">
-                            <span class="arrow-down"></span>
-                        </button>
                         <div class="dropdown-content">
                             <h4>Urutkan berdasarkan:</h4>
-                            <a href="?sort=1&submit=submit">NIM (Ascending)</a>
-                            <a href="?sort=2&submit=submit">NIM (Descending)</a>
+                            <a href="?sort=1&submit=submit"><button class="ascending">Ascending</button></a>
+                            <a href="?sort=2&submit=submit"><button class="descending">Descending</button></a>
                         </div>
                     </div>
                 </div>
@@ -95,6 +84,5 @@ if (isset($_GET['submit'])){
                 </div>
             </main>
         </div>
-    <?php endif; ?>
 </body>
 </html>

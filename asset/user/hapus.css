@@ -1,0 +1,125 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+body{
+    background-color: aliceblue;
+    font-family: 'Poppins', sans-serif;
+}
+
+.login-box {
+    display: flex;
+    width: 400px;             
+    margin: 50px auto;         
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form h1{
+    margin-bottom: 20px;
+    width: 400px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+}
+
+.form input[type = "date"]{
+    width: 350px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    margin-right: 20px;
+}
+
+.form input[type = "email"],
+.form input[type = "text"],
+.form input[type = "password"]{
+    width: 350px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    margin-right: 20px;
+}
+
+.tombol{
+    width: 200px;
+    padding: 15px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    background-color: purple;
+    color: white;
+    font-weight: bold;
+}
+
+.form p{
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+  font-weight: bold;
+  display: block;           
+  margin-top: 4px;         
+  margin-bottom: 12px;      
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    color: #333;
+    font-size: 15px;
+}
+
+.navbar-left span {
+    font-weight: 500;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar-right a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+}
+
+.navbar-right a:hover {
+    color: #007aff; /* Apple-like blue for hover */
+}
+
+.user-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: #555;
+}
+
