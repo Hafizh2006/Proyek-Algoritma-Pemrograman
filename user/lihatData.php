@@ -52,8 +52,8 @@ if (isset($_GET['submit'])){
 
                     <div class="dropdown-content">
                         <h4>Urutkan berdasarkan:</h4>
-                        <a href="?sort_column=nim&sort_order=ASC"><button class= "ascending">Ascending</button></a>
-                        <a href="?sort_column=nim&sort_order=DESC"><button class="descending">Descending</button></a>
+                        <a href="?sort=1&submit=submit"><button class= "ascending">Ascending</button></a>
+                        <a href="?sort=2&submit=submit"><button class="descending">Descending</button></a>
                     </div>
                 </div>
             </div>

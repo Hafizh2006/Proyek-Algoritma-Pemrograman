@@ -1,3 +1,17 @@
+<?php 
+session_start();
+if (!isset($_SESSION['loginAdmin'])){
+    header("Location:login.php");
+    exit();
+}
+
+require_once "../Algoritma/algoritmaUtama.php";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    ubah($_POST);
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,8 +37,8 @@
         <div class="login-box">
             <div class="form">
                 <h1>UBAH DATA MAHASISWA</h1>
-                <form method="POST" id = "formdaftar" action="../Algoritma/proses.php"><br>
-                    <input type="text" placeholder="Masukkan NIM" name="nim" id = "nim"><br>
+                <form action="" method="POST" id = "formdaftar"><br>
+                    <input type="text" placeholder="Masukkan NIM" name="nim" id = "nim" required><br>
 
                     <input type="text" placeholder="Masukkan Nama" name="nama" id = "nama"><br>
 
@@ -33,8 +47,6 @@
                     <input type="text" placeholder="Masukkan Fakultas" name="fakultas" id = "fakultas"><br>
 
                     <input type="text" placeholder="Masukkan Program Studi" name="jurusan" id = "jurusan"><br>
-
-                    <input type="text" placeholder="Masukkan Tahun Ajaran" name="tahunAjaran" id = "tahunAjaran"><br>
 
                     <span class="error" id="errorNama"></span><br>
                     <button type = "submit" name = "daftar" class = "tombol">UBAH</button>

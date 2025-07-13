@@ -1,3 +1,8 @@
 2400018020,Maharaja Singa,Laki-Laki,1976-07-06,Teknologi Industri,Informatika
-2400018003,Hafizh Ashssiddiqie,Laki-Laki,2025-07-02,Teknologi Industri,Informatika
-2400018038,Muhamad Ardyan Yulianto,Laki-Laki,2025-07-05,Teknologi Industri,Informatika
+2400018003,Hafizh Ashssiddiqieee,Laki-Laki,2025-07-02,Teknologi Industri,Informatika
+2400018038,Muhamad Ardyan Yuliantooo,Laki-Laki,2025-07-05,Teknologi Industri,Informatika
+2400018039,Parevi,Laki-Laki,2025-07-10,Teknologi Industri,Informatika
+2400018040,Dadad,Laki-Laki,2025-07-01,Teknologi Industri,Informatika
+2400018037,Bella Cantik,Perempuan,2025-07-23,Teknologi Industri,Informatika
+2400017099,Pahlewi,Laki-laki,2025-07-02,Entahlah,Entahlah
+2400017096,Rewa,Laki-laki,2025-06-19,Entahlah,Entahlah
