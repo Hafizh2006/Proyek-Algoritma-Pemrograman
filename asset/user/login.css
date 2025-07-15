@@ -18,8 +18,11 @@ body{
     display: flex;
     width: 400px;             
     margin: 50px auto;         
-    padding: 20px;
-    background-color: #fff;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 60px;
+    padding-right: 60px;
+    background-color: #212121;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
@@ -35,39 +38,30 @@ body{
     width: 400px;
     font-family: 'Poppins', sans-serif;
     font-size: 30px;
+    color: white;
 }
 
-.form input[type = "date"]{
-    width: 350px;
-    padding: 15px;
-    margin-bottom: 15px;
-    border: none;
-    border-radius: 20px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    margin-right: 20px;
-}
-
-
-.form input[type = "email"],
 .form input[type = "text"],
 .form input[type = "password"]{
     width: 350px;
     padding: 15px;
     margin-bottom: 15px;
-    border: none;
+    border: 1px solid #3A97D0;
     border-radius: 20px;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
     margin-right: 20px;
+    background-color: #212121;
+    color: white;
 }
 
 .tombol{
-    width: 200px;
+    width: 300px;
     padding: 15px;
     border-radius: 20px;
     border: none;
     cursor: pointer;
     margin-top: 10px;
-    background-color: purple;
+    background: linear-gradient(to right, #404258, #6B728E);
     color: white;
     font-weight: bold;
 }

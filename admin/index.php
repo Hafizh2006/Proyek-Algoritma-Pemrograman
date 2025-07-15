@@ -45,6 +45,11 @@ if (!isset($_SESSION['loginAdmin'])){
                 <div class="card-image-placeholder"></div>
                 <a href="ubah.php"><button class="card-button">UBAH DATA</button></a>
             </div>
+
+            <div class="card">
+                <div class="card-image-placeholder"></div>
+                <a href="hapus.php"><button class="card-button">HAPUS DATA</button></a>
+            </div>
         </div>
     </main>
 </body>

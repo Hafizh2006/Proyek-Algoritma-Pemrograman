@@ -11,8 +11,7 @@ require_once "../Algoritma/algoritmaUtama.php";
 
 
 
-if (isset($_GET['submit'])){
-
+if (isset($_GET['submit'])){    
     if ($_GET['sort'] == 1){
         $dataMahasiswa = ambilData();
         $dataMahasiswa = selectionsort_ascending($dataMahasiswa);
@@ -50,7 +49,7 @@ if (isset($_GET['submit'])){
     </header>
 
                         <div class="dropdown-content">
-                            <h4>Urutkan berdasarkan:</h4>
+                            <h4>Urutkan:</h4>
                             <a href="?sort=1&submit=submit"><button class="ascending">Ascending</button></a>
                             <a href="?sort=2&submit=submit"><button class="descending">Descending</button></a>
                         </div>
@@ -71,12 +70,12 @@ if (isset($_GET['submit'])){
                         <tbody>
                             <?php foreach ($dataMahasiswa as $mhs): ?>
                             <tr>
-                                <th><?php echo $mhs['nim'] ?></th>
-                                <th><?php echo $mhs['nama'] ?></th>
-                                <th><?php echo $mhs['jenis'] ?></th>
-                                <th><?php echo $mhs['tanggalLahir'] ?></th>
-                                <th><?php echo $mhs['fakultas'] ?></th>
-                                <th><?php echo $mhs['jurusan'] ?></th>
+                                <td><?php echo $mhs['nim'] ?></td>
+                                <td><?php echo $mhs['nama'] ?></td>
+                                <td><?php echo $mhs['jenis'] ?></td>
+                                <td><?php echo $mhs['tanggalLahir'] ?></td>
+                                <td><?php echo $mhs['fakultas'] ?></td>
+                                <td><?php echo $mhs['jurusan'] ?></td>
                             </tr>
                             <?php endforeach;?>
                         </tbody>

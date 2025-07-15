@@ -1,3 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background-color: #f0f2f5; /* Light gray background */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- Navbar Styling (reused from previous design) --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    color: #333;
+    font-size: 15px;
+}
+
+.navbar-left span {
+    font-weight: 500;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar-right a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.2s ease-in-out;
+}
+
+.navbar-right a:hover {
+    color: #007aff; /* Apple-like blue for hover */
+}
+
+.user-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: #555;
+}
+
 .container{
     display: flex;
     align-items: center;
@@ -9,10 +59,10 @@
     text-align: center;
 }
 
-body{
+/* body{
     background-color: aliceblue;
     font-family: 'Poppins', sans-serif;
-}
+} */
 
 .login-box {
     display: flex;

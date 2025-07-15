@@ -79,12 +79,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <tbody>
                        <?php if ($hasilPencarian !== null): ?>
                         <tr>
-                            <th><?php echo htmlspecialchars($hasilPencarian['nim']); ?></th>
-                            <th><?php echo htmlspecialchars($hasilPencarian['nama']); ?></th>
-                            <th><?php echo htmlspecialchars($hasilPencarian['jenis']); ?></th>
-                            <th><?php echo htmlspecialchars($hasilPencarian['tanggalLahir']); ?></th>
-                            <th><?php echo htmlspecialchars($hasilPencarian['fakultas']); ?></th>
-                            <th><?php echo htmlspecialchars($hasilPencarian['jurusan']); ?></th>
+                            <td><?php echo htmlspecialchars($hasilPencarian['nim']); ?></td>
+                            <td><?php echo htmlspecialchars($hasilPencarian['nama']); ?></td>
+                            <td><?php echo htmlspecialchars($hasilPencarian['jenis']); ?></td>
+                            <td><?php echo htmlspecialchars($hasilPencarian['tanggalLahir']); ?></td>
+                            <td><?php echo htmlspecialchars($hasilPencarian['fakultas']); ?></td>
+                            <td><?php echo htmlspecialchars($hasilPencarian['jurusan']); ?></td>
                        </tr>
                 <?php endif; ?>
                     </tbody>

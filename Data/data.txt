@@ -6,3 +6,9 @@
 2400018037,Bella Cantik,Perempuan,2025-07-23,Teknologi Industri,Informatika
 2400017099,Pahlewi,Laki-laki,2025-07-02,Entahlah,Entahlah
 2400017096,Rewa,Laki-laki,2025-06-19,Entahlah,Entahlah
+2400018666,Mei mei,Perempuan,2000-01-22,Kedokteran,Kedokteran
+2400018120,Jamal,Laki-laki,2012-12-12,Kedokteran,Kedokteran
+2400018120,Jamal,Laki-laki,2012-12-12,Kedokteran,Kedokteran
+2300018003,hafizh ashshiddiqie,Laki-laki,2006-01-21,Kedokteran,Kedokteran
+2300018003,hafizh ashshiddiqie,Laki-laki,2006-01-21,Kedokteran,Kedokteran
+2400018120,Kucay,Laki-laki,2004-02-12,Ekonomi,Ekonomi syariah

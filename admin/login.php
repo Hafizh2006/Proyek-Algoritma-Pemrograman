@@ -22,7 +22,7 @@ if (isset($_SESSION['loginAdmin'])){
    <div class="container">
         <div class="login-box">
             <div class="form">
-                <h1>LOGIN</h1>
+                <h1>LOGIN ADMIN</h1>
                 <form method="POST" id = "formdaftar" action="../Algoritma/algoritmaLogin.php">
                     <input type="text" placeholder="Username" name="username" id = "username"><br>
                     <span class="error" id="errorNama"></span><br>
