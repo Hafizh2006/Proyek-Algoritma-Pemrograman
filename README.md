@@ -1,5 +1,9 @@
 # Proyek-Algoritma-Pemrograman
-My first Python Project
+First Algorithm Project
+
+Focus :
+- Selection sort
+- Linear Sort
 
 Kelompok Manajemen Data Mahasiswa
 

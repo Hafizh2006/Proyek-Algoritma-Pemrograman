@@ -12,10 +12,9 @@ if (!isset($_SESSION['loginAdmin'])) {
 require_once "../Algoritma/algoritmaUtama.php";
 
 
-$berhasilTambah = false;
+$berhasilTambah = "";
 if (isset($_POST['submit'])) {
-    tambahData($_POST);
-    $berhasilTambah = true;
+    $berhasilTambah = tambahData($_POST);
 }
 
 
@@ -29,7 +28,7 @@ if (isset($_POST['submit'])) {
     <link rel="stylesheet" href="../asset/admin/tambah.css">
 </head>
 <body>
-    <?php if ($berhasilTambah): ?>
+    <?php if ($berhasilTambah === true): ?>
     <div id="popup-success" style="
         display: flex;
         position: fixed;
@@ -49,6 +48,34 @@ if (isset($_POST['submit'])) {
         justify-content: center;
         ">
         <span>Data berhasil ditambahkan</span>
+    </div>
+    <script>
+        setTimeout(function() {
+            document.getElementById('popup-success').style.display = 'none';
+        }, 2000);
+    </script>
+    <?php endif; ?>
+
+    <?php if ($berhasilTambah === false): ?>
+    <div id="popup-success" style="
+        display: flex;
+        position: fixed;
+        top: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #eb270dff;
+        color: white;
+        padding: 18px 32px;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        z-index: 9999;
+        font-size: 1.1em;
+        align-items: center;
+        gap: 10px;
+        min-width: 220px;
+        justify-content: center;
+        ">
+        <span>Data sudah ada/tidak menerima duplikat</span>
     </div>
     <script>
         setTimeout(function() {
