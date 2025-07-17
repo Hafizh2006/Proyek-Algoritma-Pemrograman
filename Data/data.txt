@@ -1,14 +1,5 @@
 2400018020,Maharaja Singa Pustaka,Laki-Laki,1976-07-06,Teknologi Industri,Informatika
-2400018003,Hafizh Ashssiddiqieee,Laki-Laki,2025-07-02,Teknologi Industri,Informatika
 2400018039,Parevi,Laki-Laki,2025-07-10,Teknologi Industri,Informatika
-2400018040,Dadad,Laki-Laki,2025-07-01,Teknologi Industri,Informatika
 2400018037,Bella Cantik Jelita,Perempuan,2025-07-23,Teknologi Industri,Informatika
-2400017096,Rewa,Laki-laki,2025-06-19,Entahlah,Entahlah
-2400018666,Mei mei,Perempuan,2000-01-22,Kedokteran,Kedokteran
 2400018120,Jamal,Laki-laki,2012-12-12,Kedokteran,Kedokteran
 2400018120,Jamal,Laki-laki,2012-12-12,Kedokteran,Kedokteran
-2300018003,hafizh ashshiddiqie,Laki-laki,2006-01-21,Kedokteran,Kedokteran
-230001003,hafizh ashshiddiqie,Laki-laki,2006-01-21,Kedokteran,Kedokteran
-2400006120,Kucay dermaga,Laki-laki,2004-02-12,Ekonomi,Ekonomi syariah
-2400018038,Muhamad Ardyan Yulianto,Laki - laki,2025-07-19,Teknologi Industri,Informatika
-2400018200,Linda Aprilia,Perempuan,2025-04-05,Kedokteran,Kedokteran

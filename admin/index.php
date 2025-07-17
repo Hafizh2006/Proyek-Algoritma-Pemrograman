@@ -50,6 +50,12 @@ if (!isset($_SESSION['loginAdmin'])){
                 <div class="card-image-placeholder"></div>
                 <a href="hapus.php"><button class="card-button">HAPUS DATA</button></a>
             </div>
+
+            <div class="card">
+            <div class="card-image-placeholder"></div>
+                <a href="cari.php"><button class="card-button">CARI DATA</button></a>
+            </div>
+            </div>
         </div>
     </main>
 </body>

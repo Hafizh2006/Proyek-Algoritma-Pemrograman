@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['loginUser'])){
+if (!isset($_SESSION['loginAdmin'])){
     header("Location:login.php");
     exit();
 }
@@ -17,9 +17,7 @@ $pesan = '';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['nim']) && !empty(trim($_POST['nim']))) {
         $nimYangDicari = ($_POST['nim']);
-
         $semuaDataMahasiswa = ambilData();
-
         $hasilPencarian = cari($semuaDataMahasiswa, $nimYangDicari);
         // var_dump($hasilPencarian); die;
         if ($hasilPencarian === null) {
@@ -36,8 +34,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistem Informasi Mahasiswa</title>
-    <link rel="stylesheet" href="../asset/user/cari.css">
+    <title>CARI DATA MAHASISWA</title>
+    <link rel="stylesheet" href="../asset/admin/cari.css">
 </head>
 <body>
     <header class="navbar">

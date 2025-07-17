@@ -102,10 +102,10 @@ body {
 .submit-button {
     width: 100%;
     padding: 15px;
-    background-color: #9b59b6; 
+    background: linear-gradient(to right, #BC34FB, #9629C8, #8324AE, #6F1F95);
     color: #ffffff;
     border: none;
-    border-radius: 8px;
+    border-radius: 20px;
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;

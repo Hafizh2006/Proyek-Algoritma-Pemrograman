@@ -3,13 +3,12 @@
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
-    background-color: #f0f2f5; /* Light gray background */
+    background-color: #f0f2f5; 
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* --- Navbar Styling (reused from previous design) --- */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -39,7 +38,7 @@ body {
 }
 
 .navbar-right a:hover {
-    color: #007aff; /* Apple-like blue for hover */
+    color: #007aff; 
 }
 
 .user-icon {
@@ -48,49 +47,79 @@ body {
     color: #555;
 }
 
-/* --- Main Content Styling --- */
 .main-content {
-    flex-grow: 1; /* Allows it to take available space */
+    flex-grow: 1; 
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    padding: 20px; /* Add some padding around the container */
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px; 
 }
 
 .cards-container {
     display: flex;
-    gap: 40px; /* Space between cards */
-    flex-wrap: wrap; /* Allow cards to wrap to the next line on smaller screens */
-    justify-content: center; /* Center cards if they wrap */
-    padding: 20px; /* Padding for the container itself */
+    gap: 40px; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    padding: 20px; 
 }
 
-.card {
+.card1 {
     background-color: #ffffff;
-    border: 1px solid #c9c9c9;
+    border: 1px solid black;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 30px;
+    padding-right: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 30px;
-    width: 250px; /* Fixed width for each card */
-    max-width: 100%; /* Ensure it doesn't overflow on small screens */
+    width: 250px; 
+    max-width: 100%;
     text-align: center;
 }
 
-.card-image-placeholder {
-    width: 180px; /* Adjust as needed */
-    height: 180px; /* Adjust as needed */
-    background-color: #333; /* Black color for the placeholder */
-    border-radius: 8px; /* Slightly rounded corners for the placeholder */
+.card2 {
+    background-color: black;
+    border: 1px solid white;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px; 
+    max-width: 100%;
+    text-align: center;
+}
+
+
+.card-image-placeholder1 {
+    width: 180px; 
+    height: 180px; 
+    background-color: black; 
+    border-radius: 8px; 
+    margin-bottom: 30px;
+}
+
+.card-image-placeholder2 {
+    width: 180px; 
+    height: 180px; 
+    background-color: white; 
+    border-radius: 8px; 
     margin-bottom: 30px;
 }
 
 .card-button {
     width: 100%;
     padding: 15px;
-    background-color: #9b59b6; /* Purple color from the image */
+    padding-left: 50px;
+    padding-right: 50px;
+    background: linear-gradient(to right, #DDE6ED, #9DB2BF, #526D82, #27374D);
     color: #ffffff;
     border: none;
     border-radius: 8px;
@@ -99,22 +128,21 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
     box-shadow: 0 4px 10px rgba(155, 89, 182, 0.4);
-    text-transform: uppercase; /* Ensure button text is uppercase */
+    text-transform: uppercase; 
 }
 
 .card-button:hover {
-    background-color: #8e44ad; /* Slightly darker purple on hover */
+    background-color: #8e44ad; 
 }
 
-/* --- Responsive adjustments --- */
 @media (max-width: 768px) {
     .cards-container {
-        flex-direction: column; /* Stack cards vertically on smaller screens */
-        align-items: center; /* Center stacked cards */
-        gap: 30px; /* Adjust gap for vertical stacking */
+        flex-direction: column; 
+        align-items: center; 
+        gap: 30px; 
     }
     .card {
-        width: 80%; /* Make cards take more width on smaller screens */
+        width: 80%; 
     }
 }
 

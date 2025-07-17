@@ -116,7 +116,7 @@ body {
     border: none;
     cursor: pointer;
     margin-top: 10px;
-    background-color: purple;
+    background: linear-gradient(to right, #BC34FB, #9629C8, #8324AE, #6F1F95);
     color: white;
     font-weight: bold;
 }

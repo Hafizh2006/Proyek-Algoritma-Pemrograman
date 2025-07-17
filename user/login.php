@@ -13,7 +13,7 @@ if (isset($_SESSION['loginUser'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Pendaftaran</title>
+    <title>LOGIN MAHASISWA</title>
     <link rel="stylesheet" href="../asset/user/login.css">
 </head>
 <body>
