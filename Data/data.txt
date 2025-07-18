@@ -2,4 +2,6 @@
 2400018039,Parevi,Laki-Laki,2025-07-10,Teknologi Industri,Informatika
 2400018037,Bella Cantik Jelita,Perempuan,2025-07-23,Teknologi Industri,Informatika
 2400018120,Jamal,Laki-laki,2012-12-12,Kedokteran,Kedokteran
-2400018120,Jamal,Laki-laki,2012-12-12,Kedokteran,Kedokteran
+2400018038,Muhamad Ardyan Yulianto,Laki-laki,2025-07-16,Teknologi Industri,Informatika
+2400017099,Vania Cantik,Perempuan,2023-09-14,Kedokteran,Kedokteran
+2400018200,Linda Aprilia Maulidina (keren),Perempuan,2025-07-25,Kedokteran,Kedokteran

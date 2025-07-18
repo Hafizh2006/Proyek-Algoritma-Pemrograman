@@ -1,5 +1,9 @@
-<?php 
+<?php
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL); 
 session_start();
+
 
 if (!isset($_SESSION['loginAdmin'])){
     header("Location:login.php");
@@ -9,6 +13,10 @@ if (!isset($_SESSION['loginAdmin'])){
 
 require_once "../Algoritma/algoritmaUtama.php";
 
+
+// $cek = manual_strlen(ambilData());
+// $cek1 = manual_array_values(ambilData());
+// var_dump($cek1); die;
 
 
 if (isset($_GET['submit'])){    
@@ -25,6 +33,8 @@ if (isset($_GET['submit'])){
 } else {
     $dataMahasiswa = ambilData();
 }
+
+
 
 ?>
 <!DOCTYPE html>

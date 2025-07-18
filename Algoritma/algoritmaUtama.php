@@ -1,4 +1,53 @@
-<?php 
+<?php
+
+function manual_strlen($kata){
+    $count = 0;
+
+    while (true){
+
+        if (isset($kata[$count])){
+            $count++;
+        } else {
+            break;
+        }
+    }
+
+    return $count;
+}
+
+function manual_explode($pemisah, $kalimat){
+    $hasil = [];
+    $kata = "";
+    $count = manual_strlen($kalimat);
+    $indeks = 0;
+    
+    for ($i = 0; $i < $count; $i++){
+        $char = $kalimat[$i]; 
+        if ($char == $pemisah){
+            $hasil[$indeks] = $kata;
+            $kata = "";
+            $indeks = $indeks + 1;
+        } else {
+            $kata = $kata . $char;
+        }
+    }
+    $hasil[] = $kata;
+    return $hasil;
+
+}
+
+
+function manual_array_values(array $inputArray): array {
+    $newArray = [];
+    $index = 0; 
+
+    foreach ($inputArray as $value) {
+        $newArray[$index] = $value; 
+        $index++; 
+    }
+
+    return $newArray;
+}
 
 function tambahData($data){
     //var_dump($data); die;
@@ -11,7 +60,7 @@ function tambahData($data){
         return true; 
     } else {
         $dataMahasiswa = ambilData();
-        $count = count(ambilData());
+        $count = manual_strlen(ambilData());
         // var_dump($count); var_dump($dataMahasiswa[0]['nim']); die;
         for ($i = 0; $i < $count; $i++){
             if (intval($data['nim']) === intval($dataMahasiswa[$i]['nim'])){
@@ -27,6 +76,9 @@ function tambahData($data){
 }
 
 
+
+
+
 function ambilData(){
     $i = 0;
     $dataMahasiswa = array();
@@ -34,7 +86,7 @@ function ambilData(){
     $myFile = fopen($file, 'r');
     while (!feof($myFile)){
         $data = fgets($myFile);
-        $data = explode(',', $data);
+        $data = manual_explode(',', $data);
         $dataMahasiswa[$i] = array(
             'nim' => $data[0],
             'nama' => $data[1],
@@ -50,17 +102,21 @@ function ambilData(){
 }
 
 
+
+
 function selectionsort_ascending($dataMahasiswa){
-    $iteration = count($dataMahasiswa);
+    $iteration = 0;
+    foreach($dataMahasiswa as $data) {
+        $iteration++;
+    }
+
     for ($i = 0; $i < $iteration - 1; $i++){
         $min =  $i;
-        
         for ($j = $i + 1; $j < $iteration; $j++){
-            if (intval($dataMahasiswa[$j]['nim']) < intval($dataMahasiswa[$min]['nim'])){
+            if (($dataMahasiswa[$j]['nim']) < ($dataMahasiswa[$min]['nim'])){
                 $min = $j;
             }
         }
-
         if ($min != $i){
             $tampung = $dataMahasiswa[$i];
             $dataMahasiswa[$i] = $dataMahasiswa[$min];
@@ -74,19 +130,18 @@ function selectionsort_ascending($dataMahasiswa){
 }
 
 function selectionsort_descending($dataMahasiswa = []){
-    $iteration = count($dataMahasiswa);
+    $iteration = 0;
+    foreach($dataMahasiswa as $data) {
+        $iteration++;
+    }
+
     for ($i = 0; $i < $iteration - 1; $i++){
         $max_index =  $i;
-
-
         for ($j = $i + 1; $j < $iteration; $j++){
-            
-            if (intval($dataMahasiswa[$j]['nim']) > intval($dataMahasiswa[$max_index]['nim'])){
+            if (($dataMahasiswa[$j]['nim']) > ($dataMahasiswa[$max_index]['nim'])){
                 $max_index = $j;
             }
-
         }
-
         if ($max_index != $i){
                 $tampung = $dataMahasiswa[$i];
                 $dataMahasiswa[$i] = $dataMahasiswa[$max_index];
@@ -98,12 +153,10 @@ function selectionsort_descending($dataMahasiswa = []){
 
 }
 
-function cari($dataMahasiswa, $nimCari){
-    //var_dump($dataMahasiswa); die;
-    $nimCari = (string)$nimCari; 
-    
+function cari($dataMahasiswa, string $nimCari){
+    //var_dump($dataMahasiswa); die; 
     foreach ($dataMahasiswa as $data) {
-        if (isset($data['nim']) && intval($data['nim']) === intval($nimCari)) {
+        if (isset($data['nim']) && ($data['nim']) === ($nimCari)) {
             return $data;
         }
     }
@@ -124,7 +177,7 @@ function ubah($dataForm){
     while (!feof($myFile)){
         $data = fgets($myFile);
 
-        $data = explode(',', $data);
+        $data = manual_explode(',', $data);
 
         $dataMahasiswa[$i] = [
             'nim' => trim($data[0]),
@@ -135,12 +188,12 @@ function ubah($dataForm){
             'jurusan' => trim($data[5])
         ];
 
-        if (intval($dataForm['nim']) === intval($dataMahasiswa[$i]['nim'])){
+        if ($dataForm['nim'] === $dataMahasiswa[$i]['nim']){
             $check = true;
         }
 
         if (isset($dataForm['nim'])) {
-            if (intval($dataMahasiswa[$i]['nim']) === intval($dataForm['nim'] )) {
+            if ($dataMahasiswa[$i]['nim'] === $dataForm['nim']) {
                 //var_dump($dataMahasiswa[$i]); var_dump($dataForm); die;                
                 if (!empty($dataForm['nim'])) {
                    $dataMahasiswa[$i]['nim'] = $dataForm['nim'];
@@ -181,7 +234,7 @@ function ubah($dataForm){
     }
 
     fclose($myFile);
-    $count = count($dataMahasiswa);
+    $count = manual_strlen($dataMahasiswa);
 
     # Tulis/timpa semua di file tersebut dengan yang baru
     //var_dump($count); var_dump($dataMahasiswa); die;
@@ -201,6 +254,7 @@ function ubah($dataForm){
 
 
 function hapus($dataForm){
+
     //var_dump($dataForm); die;
     $i = 0;
     $file = "../Data/data.txt";
@@ -212,7 +266,7 @@ function hapus($dataForm){
     while (!feof($myFile)){
         $data = fgets($myFile);
 
-        $data = explode(',', $data);
+        $data = manual_explode(',', $data);
 
         $dataMahasiswa[$i] = [
             'nim' => trim($data[0]),
@@ -223,12 +277,10 @@ function hapus($dataForm){
             'jurusan' => trim($data[5])
         ];
 
-        if (intval($dataForm['nim']) === intval($dataMahasiswa[$i]['nim'])){
-            $check = true;
-        }
+        
 
-        if (isset($dataForm['nim']) && 
-            intval($dataForm['nim']) === intval($dataMahasiswa[$i]['nim'])) {
+        if (isset($dataForm['nim']) && ($dataForm['nim'] === $dataMahasiswa[$i]['nim'])) {
+            $check = true;
             unset($dataMahasiswa[$i]);
 
         }
@@ -236,15 +288,16 @@ function hapus($dataForm){
         $i =  $i + 1;
     
     }
+    fclose($myFile);
+    
     if ($check == false){
         return false;
     }
-
-    fclose($myFile);
     
-    
+    // Pengurutan 
+    $dataMahasiswa = manual_array_values($dataMahasiswa);
 
-    $count = count($dataMahasiswa);
+    $count = manual_strlen($dataMahasiswa);
     //var_dump($dataForm['nim']); var_dump($i); var_dump($count); var_dump($dataMahasiswa); die;
     $tulis = fopen($file, 'w');
     for ($i = 0;$i < $count; $i++) {
@@ -256,15 +309,13 @@ function hapus($dataForm){
         $fakultas = $dataMahasiswa[$i]['fakultas'];
         $jurusan = $dataMahasiswa[$i]['jurusan'];
 
-        if (isset($nim) && isset($nama) && isset($jenis) && isset($tanggalLahir) && isset($fakultas) && isset($jurusan)){
-            $line = $nim . "," . $nama . "," . $jenis . "," . $tanggalLahir . "," . $fakultas . "," . $jurusan;
+        $line = $nim . "," . $nama . "," . $jenis . "," . $tanggalLahir . "," . $fakultas . "," . $jurusan;
             
-            if ($i < $count - 1){
+        if ($i < $count - 1){
                 $line = $line . "\n";
-            }
-            fwrite($tulis, $line);
-
         }
+
+        fwrite($tulis, $line);
         
     }
     fclose($tulis);
